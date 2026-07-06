@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Courtney Cavey — Growth Marketing Leader | B2B SaaS &amp; AI</title>
+<meta name="description" content="Courtney Cavey is a B2B SaaS marketing leader who takes companies past product-market fit and builds the strategy, systems, and teams to scale — from $5M to $17M ARR at Hubstaff to AI-native marketing engines today." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #1e2a4a;
+    --navy-deep: #141d35;
+    --blue: #3b58a7;
+    --blue-bright: #4f6fd1;
+    --coral: #e6664b;
+    --ink: #1a1f2e;
+    --slate: #5a6379;
+    --line: #e4e7ef;
+    --bg: #ffffff;
+    --bg-soft: #f6f8fc;
+    --bg-tint: #eef2fb;
+    --radius: 16px;
+    --maxw: 1080px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 78px; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.12; letter-spacing: -0.01em; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue);
+    margin-bottom: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; letter-spacing: -0.01em; }
+  .brand span { color: var(--blue); }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-size: 0.92rem; font-weight: 500; color: var(--slate); transition: color .15s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-links a.active { color: var(--navy-deep); }
+  .nav-links a.active:not(.nav-cta)::after { content: ""; display: block; height: 2px; background: var(--coral); border-radius: 2px; margin-top: 3px; }
+  .nav-cta {
+    background: var(--navy); color: #fff !important; padding: 9px 18px;
+    border-radius: 999px; font-size: 0.88rem; font-weight: 600; transition: background .15s;
+  }
+  .nav-cta:hover { background: var(--blue); }
+  .menu-toggle { display: none; background: none; border: 0; font-size: 1.5rem; cursor: pointer; color: var(--navy); }
+
+  /* HERO */
+  header.hero {
+    background:
+      radial-gradient(1100px 500px at 78% -10%, rgba(79,111,209,0.16), transparent 60%),
+      radial-gradient(800px 420px at 8% 120%, rgba(230,102,75,0.10), transparent 55%),
+      linear-gradient(180deg, #fbfcff 0%, #f6f8fc 100%);
+    border-bottom: 1px solid var(--line);
+    padding: 92px 0 84px;
+  }
+  .hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 56px; align-items: center; }
+  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); color: var(--navy-deep); }
+  .hero .lede { font-size: 1.18rem; color: var(--slate); margin-top: 22px; max-width: 40ch; }
+  .hero .lede strong { color: var(--ink); font-weight: 600; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 0.96rem;
+    padding: 13px 24px; border-radius: 999px; transition: transform .12s, background .15s, box-shadow .15s; cursor: pointer;
+  }
+  .btn-primary { background: var(--navy); color: #fff; box-shadow: 0 10px 24px -10px rgba(30,42,74,0.6); }
+  .btn-primary:hover { background: var(--blue); transform: translateY(-2px); }
+  .btn-ghost { background: #fff; color: var(--navy); border: 1px solid var(--line); }
+  .btn-ghost:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+  .hero-meta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 18px; color: var(--slate); font-size: 0.92rem; }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--coral); }
+
+  .portrait {
+    position: relative; aspect-ratio: 4/5; border-radius: 22px;
+    background: linear-gradient(155deg, var(--blue) 0%, var(--navy-deep) 100%);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 30px 60px -28px rgba(30,42,74,0.55);
+    overflow: hidden;
+  }
+  .portrait .initials { font-family: 'Fraunces', serif; font-size: 5.5rem; color: rgba(255,255,255,0.95); font-weight: 500; }
+  .portrait .headshot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; z-index: 1; }
+  .portrait::after {
+    content: ""; position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(420px 220px at 20% 12%, rgba(255,255,255,0.18), transparent 60%);
+  }
+  .portrait-tag {
+    position: absolute; bottom: 16px; left: 16px; right: 16px; z-index: 3;
+    background: rgba(255,255,255,0.94); border-radius: 12px; padding: 12px 16px;
+    font-size: 0.82rem; color: var(--slate); backdrop-filter: blur(6px);
+  }
+  .portrait-tag b { color: var(--navy); font-weight: 600; }
+
+  /* LOGO STRIP */
+  .logos { padding: 28px 0; border-bottom: 1px solid var(--line); background: #fff; }
+  .logos .wrap { display: flex; align-items: center; gap: 14px 34px; flex-wrap: wrap; justify-content: center; }
+  .logos .label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #9aa3b8; font-weight: 600; }
+  .logos .name { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--navy); font-weight: 500; opacity: 0.85; }
+
+  /* SECTIONS */
+  section { padding: 84px 0; }
+  section.tint { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .sec-head { max-width: 660px; margin-bottom: 48px; }
+  .sec-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); color: var(--navy-deep); }
+  .sec-head p { color: var(--slate); font-size: 1.08rem; margin-top: 16px; }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: start; }
+  .about-body p { font-size: 1.1rem; color: #2f3645; margin-bottom: 20px; }
+  .about-body p strong { color: var(--navy); font-weight: 600; }
+  .about-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: 0 16px 40px -28px rgba(30,42,74,0.3); }
+  .about-card h3 { font-family: 'Inter', sans-serif; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; }
+  .about-card ul { list-style: none; }
+  .about-card li { padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 0.96rem; color: #2f3645; display: flex; justify-content: space-between; gap: 12px; }
+  .about-card li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .about-card li span { color: var(--slate); text-align: right; }
+
+  /* METRICS */
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .metric { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; transition: transform .15s, box-shadow .15s; }
+  .metric:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -26px rgba(30,42,74,0.4); }
+  .metric .num { font-family: 'Fraunces', serif; font-size: 2.6rem; font-weight: 600; color: var(--blue); line-height: 1; }
+  .metric .num small { font-size: 1.3rem; }
+  .metric .lbl { margin-top: 14px; font-size: 0.95rem; color: var(--slate); }
+
+  /* APPROACH */
+  .approach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .approach-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; position: relative; }
+  .approach-card .step { font-family: 'Fraunces', serif; font-size: 1.05rem; color: var(--coral); font-weight: 600; margin-bottom: 10px; }
+  .approach-card h3 { font-size: 1.2rem; color: var(--navy-deep); margin-bottom: 8px; }
+  .approach-card p { color: #2f3645; font-size: 0.99rem; }
+  .approach-note { margin-top: 26px; font-size: 0.95rem; color: var(--slate); font-style: italic; }
+
+  /* CASE STUDIES */
+  .cases { display: grid; gap: 22px; }
+  .case {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 34px; display: grid; grid-template-columns: 200px 1fr; gap: 34px; align-items: start;
+    transition: box-shadow .18s, transform .18s;
+  }
+  .case:hover { box-shadow: 0 26px 52px -30px rgba(30,42,74,0.42); transform: translateY(-3px); }
+  .case.lead { border-color: #cdd7f0; box-shadow: 0 20px 46px -30px rgba(59,88,167,0.45); }
+  .case .meta .role { font-family: 'Fraunces', serif; font-size: 1.25rem; color: var(--navy-deep); }
+  .case .meta .co { color: var(--blue); font-weight: 600; font-size: 0.95rem; margin-top: 4px; }
+  .case .meta .yr { color: var(--slate); font-size: 0.85rem; margin-top: 6px; }
+  .case .meta .tag { display: inline-block; margin-top: 14px; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--coral); background: #fdeee9; padding: 5px 11px; border-radius: 999px; }
+  .case h3 { font-size: 1.35rem; color: var(--ink); margin-bottom: 10px; }
+  .case .body p { color: #2f3645; margin-bottom: 16px; font-size: 1.02rem; }
+  .case .results { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .case .results .chip { background: var(--bg-tint); color: var(--navy); font-weight: 600; font-size: 0.85rem; padding: 7px 13px; border-radius: 8px; }
+
+  /* LOOM / VIDEO EMBED */
+  .loom { margin-top: 20px; }
+  .loom .frame {
+    position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden;
+    background: linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 100%);
+    border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
+  }
+  .loom .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .loom .placeholder { text-align: center; color: rgba(255,255,255,0.9); padding: 20px; }
+  .loom .play { width: 58px; height: 58px; border-radius: 50%; background: rgba(255,255,255,0.16); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .loom .play::after { content: ""; border-left: 16px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 4px; }
+  .loom .cap { font-size: 0.82rem; color: var(--slate); margin-top: 10px; }
+
+  /* SKILLS */
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .skill-col { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+  .skill-col h3 { font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .skill-col h3 .ic { width: 30px; height: 30px; border-radius: 8px; background: var(--bg-tint); display: inline-flex; align-items: center; justify-content: center; color: var(--blue); font-size: 1rem; }
+  .skill-col ul { list-style: none; }
+  .skill-col li { padding: 8px 0; color: #2f3645; font-size: 0.97rem; border-bottom: 1px dashed var(--line); }
+  .skill-col li:last-child { border-bottom: 0; }
+
+  /* FRACTIONAL / TIERS */
+  .tiers-wrap { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .tiers { width: 100%; border-collapse: collapse; }
+  .tiers th, .tiers td { text-align: left; padding: 16px 22px; border-bottom: 1px solid var(--line); font-size: 0.98rem; }
+  .tiers thead th { background: var(--bg-tint); color: var(--navy); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .tiers td.tier { font-weight: 600; color: var(--navy-deep); }
+  .tiers td.rate { font-family: 'Fraunces', serif; font-weight: 600; color: var(--blue); font-size: 1.1rem; white-space: nowrap; }
+  .tiers tr:last-child td { border-bottom: 0; }
+  .tiers tr.adhoc td { background: #fbfcff; }
+  .tiers-note { color: var(--slate); font-size: 0.92rem; margin-top: 16px; }
+
+  /* CONTACT */
+  .contact { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%); color: #fff; }
+  .contact .sec-head h2 { color: #fff; }
+  .contact .sec-head p { color: rgba(255,255,255,0.72); }
+  .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+  .contact-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius); padding: 30px; }
+  .contact-card a { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); color: #fff; font-size: 1.02rem; transition: color .15s; }
+  .contact-card a:last-child { border-bottom: 0; }
+  .contact-card a:hover { color: var(--blue-bright); }
+  .contact-card a .k { color: rgba(255,255,255,0.55); font-size: 0.82rem; width: 86px; flex-shrink: 0; }
+  .contact .btn-primary { background: var(--coral); }
+  .contact .btn-primary:hover { background: #f0795f; }
+  .contact .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.3); }
+  .contact .btn-ghost:hover { border-color: #fff; color: #fff; }
+
+  /* FOOTER */
+  footer { background: var(--navy-deep); color: rgba(255,255,255,0.6); padding: 30px 0; font-size: 0.88rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 860px) {
+    .nav-links { position: fixed; top: 64px; left: 0; right: 0; background: #fff; flex-direction: column; gap: 0; padding: 8px 0; border-bottom: 1px solid var(--line); display: none; box-shadow: 0 20px 40px -20px rgba(0,0,0,0.2); }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 14px 24px; width: 100%; }
+    .nav-links .nav-cta { margin: 8px 24px; text-align: center; justify-content: center; display: flex; }
+    .menu-toggle { display: block; }
+    .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero-grid { gap: 40px; }
+    .portrait { max-width: 320px; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .approach-grid { grid-template-columns: 1fr; }
+    .case { grid-template-columns: 1fr; gap: 18px; }
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 460px) {
+    .metrics { grid-template-columns: 1fr; }
+    section { padding: 60px 0; }
+    .tiers th, .tiers td { padding: 13px 14px; font-size: 0.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">Courtney <span>Cavey</span></a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#approach">Approach</a>
+      <a href="#work">Case Studies</a>
+      <a href="#skills">Skills</a>
+      <a href="#engage">Engage</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Growth Marketing Leader &middot; B2B SaaS &amp; AI</div>
+      <h1>I turn product-market fit into a growth engine that scales.</h1>
+      <p class="lede">A full-function B2B SaaS marketing leader who takes companies <strong>past product-market fit</strong> and builds the strategy, systems, and team to scale — from <strong>$5M to $17M ARR</strong> at Hubstaff to AI-native marketing engines today.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Let's talk &rarr;</a>
+        <a href="#work" class="btn btn-ghost">See the work</a>
+      </div>
+      <div class="hero-meta">
+        <span><span class="dot"></span> DeLand, FL &middot; Remote</span>
+        <span><span class="dot"></span> Featured in Bloomberg, The New Yorker, NYT</span>
+      </div>
+    </div>
+    <div class="portrait">
+      <img class="headshot" src="images/headshot.jpg" alt="Courtney Cavey, marketing leader"
+           onerror="this.style.display='none';document.getElementById('mono').style.display='flex';" />
+      <div class="initials" id="mono" style="display:none;align-items:center;justify-content:center;position:absolute;inset:0;">CC</div>
+      <div class="portrait-tag"><b>Courtney Cavey</b> &mdash; Marketing leader who installs the strategy, systems, and operating cadence that scale growth.</div>
+    </div>
+  </div>
+</header>
+
+<div class="logos">
+  <div class="wrap">
+    <span class="label">Scaled marketing at</span>
+    <span class="name">Hubstaff</span>
+    <span class="name">Lineup.ai</span>
+    <span class="name">ClickTime</span>
+    <span class="name">GolfNow / NBC Sports</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-body">
+      <div class="eyebrow">About</div>
+      <div class="sec-head" style="margin-bottom:28px;">
+        <h2>The operator who scales what's already working.</h2>
+      </div>
+      <p>I'm an end-to-end B2B SaaS marketing leader who does my best work when a company has found product-market fit and needs someone to turn it into <strong>repeatable, compounding growth</strong>. I own the full function — positioning, demand generation, content, product marketing, brand, and the systems that tie them together — and I pair strategic vision with hands-on execution.</p>
+      <p>At <strong>Hubstaff</strong>, I scaled ARR from $5M to $17M in three years, bootstrapped, by building the acquisition systems and operating rhythm that let growth compound without ballooning headcount. At <strong>Lineup.ai</strong>, I grew average contract value 3x and helped carry the company to acquisition by SourceForge.</p>
+      <p>Today, as a <strong>fractional CMO</strong>, I build AI-native marketing systems — multi-step SEO/GEO/AEO pipelines in N8N and Claude that rank for both Google and LLM citation, automated intelligence reports, and content generation at scale. I'm not just using AI tools; I'm building the marketing systems with them.</p>
+    </div>
+    <aside class="about-card">
+      <h3>At a glance</h3>
+      <ul>
+        <li>Experience <span>11 years</span></li>
+        <li>Best fit <span>Post-PMF &rarr; scale</span></li>
+        <li>Focus <span>B2B SaaS &amp; AI</span></li>
+        <li>Scope <span>Full-function marketing</span></li>
+        <li>Signature <span>$5M &rarr; $17M ARR</span></li>
+        <li>Based <span>DeLand, FL &middot; Remote</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Impact</div>
+      <h2>Numbers that moved the business.</h2>
+      <p>Marketing is only worth what it returns. Here's what the work has produced.</p>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="num">3.4<small>x</small></div><div class="lbl">ARR scaled at Hubstaff — $5M to $17M, bootstrapped</div></div>
+      <div class="metric"><div class="num">3<small>x</small></div><div class="lbl">Average contract value growth at Lineup.ai</div></div>
+      <div class="metric"><div class="num">+20<small>%</small></div><div class="lbl">Beat Year-1 ARR goal on the GolfNow Plus launch</div></div>
+      <div class="metric"><div class="num">1,200<small>+</small></div><div class="lbl">Pages led in an AI-driven website redesign</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Approach</div>
+      <h2>How I scale marketing.</h2>
+      <p>A repeatable operating system for turning product-market fit into predictable growth — not a bet on any single channel.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-card">
+        <div class="step">01 &middot; Foundation first</div>
+        <h3>Fix the engine before adding fuel</h3>
+        <p>A high-performing website, technical SEO, and conversion-rate optimization come first. Get the core converting before pouring spend into the top of the funnel.</p>
+      </div>
+      <div class="approach-card">
+        <div class="step">02 &middot; Test systematically</div>
+        <h3>Traction channels, run like experiments</h3>
+        <p>Creator programs, community, events, ABX — tested methodically with the Bullseye framework (~$3–10K per channel test) to find what actually compounds, instead of betting everything on one bet.</p>
+      </div>
+      <div class="approach-card">
+        <div class="step">03 &middot; Engine + turbo</div>
+        <h3>A steady engine with strategic boosts</h3>
+        <p>Adapting Lenny Rachitsky's "race car" model — a dependable growth engine that keeps compounding, plus turbo boosts layered on where the data says they'll pay off.</p>
+      </div>
+      <div class="approach-card">
+        <div class="step">04 &middot; Data &amp; cadence</div>
+        <h3>Pragmatic data, tight operating rhythm</h3>
+        <p>Start from a GA4 baseline and build from whatever exists — comfortable operating with imperfect data — in a weekly/bi-weekly cadence with sales, product, and engineering.</p>
+      </div>
+    </div>
+    <p class="approach-note">Range note: I've also built marketing from zero — founding the function at Lineup.ai — so I know what the earliest stage needs. But where I create the most leverage is taking a proven product and building the system that scales it.</p>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="work" class="tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Case Studies</div>
+      <h2>Proof, in four chapters.</h2>
+      <p>One through-line: take marketing from wherever it is and turn it into a machine that performs — week after week.</p>
+    </div>
+    <div class="cases">
+
+      <article class="case lead">
+        <div class="meta">
+          <div class="role">Head of Marketing</div>
+          <div class="co">Hubstaff</div>
+          <div class="yr">2019 &ndash; 2022 &middot; Remote</div>
+          <div class="tag">Scale &middot; Bootstrapped</div>
+        </div>
+        <div class="body">
+          <h3>Scaled ARR from $5M to $17M — bootstrapped, in three years</h3>
+          <p>Owned the full marketing function — demand generation, content, SEO, product marketing, brand, and lifecycle across every channel — at a fully remote, product-led company.</p>
+          <p>The growth came from systems, not spend: repeatable processes, self-serve acquisition, and an operating rhythm that let revenue compound <strong>3.4x</strong>. Along the way I built the team behind it — from <strong>3 part-time freelancers to 22 full-time employees</strong> across marketing, growth, engineering, and data analytics. This is the post-PMF scale playbook in its purest form.</p>
+          <p>A signature win: website CRO testing and a full revamp, plus a construction-industry segmentation strategy and targeted campaign that drove a <strong>3x increase</strong>.</p>
+          <div class="loom">
+            <div class="frame">
+              <iframe src="https://www.loom.com/embed/5aa6cdcebb01493bbd0d7fd566cfc464" allowfullscreen title="Hubstaff CRO testing, website revamp & construction-industry campaign"></iframe>
+            </div>
+            <div class="cap">Walkthrough: Hubstaff.com CRO testing, revamp &amp; the construction-segment campaign.</div>
+          </div>
+          <div class="results" style="margin-top:18px;">
+            <span class="chip">$5M &rarr; $17M ARR</span>
+            <span class="chip">3 years, bootstrapped</span>
+            <span class="chip">Built team: 3 &rarr; 22 FTEs</span>
+            <span class="chip">3x from vertical campaign</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="meta">
+          <div class="role">Fractional CMO</div>
+          <div class="co">ClickTime &amp; Select Clients</div>
+          <div class="yr">2024 &ndash; Present &middot; Remote</div>
+          <div class="tag">AI Systems &middot; Repositioning</div>
+        </div>
+        <div class="body">
+          <h3>Rebuilt the marketing engine with AI — and migrated 1,200+ pages</h3>
+          <p>Led a full brand repositioning and a <strong>1,200+ page website redesign</strong>, anchored by a unified SEO positioning strategy and keyword map that kept the brand consistent across every page — including a company-wide rebrand rollout with 301-redirect and SEO discipline.</p>
+          <p>Built <strong>three AI-powered marketing engines in N8N</strong>: an SEO/GEO/AEO pipeline that ranks for both Google and LLM citation, automated weekly SEO intelligence reports, and keyword-targeted content generation at scale. Repositioned the category from "time tracking" to cost allocation and margin protection, drawn from real sales-call research.</p>
+          <div class="loom">
+            <div class="frame">
+              <!-- To embed the Loom walkthrough: replace this .placeholder div with:
+                   <iframe src="https://www.loom.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+              <div class="placeholder">
+                <div class="play"></div>
+                <div>Video walkthrough of the ClickTime migration</div>
+              </div>
+            </div>
+            <div class="cap">Loom walkthrough — embed coming soon.</div>
+          </div>
+          <div class="results" style="margin-top:18px;">
+            <span class="chip">1,200+ pages migrated</span>
+            <span class="chip">3 AI marketing engines</span>
+            <span class="chip">Category repositioning</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="meta">
+          <div class="role">Founding Head of Marketing</div>
+          <div class="co">Lineup.ai &middot; Acquired by SourceForge</div>
+          <div class="yr">2022 &ndash; 2024 &middot; Remote</div>
+          <div class="tag">PLG &middot; 3x ACV &middot; Exit</div>
+        </div>
+        <div class="body">
+          <h3>Built a self-serve growth motion — 50%+ conversion, 2x the customer base</h3>
+          <p>Built the marketing function and installed the systems that grew <strong>average contract value 3x</strong> and generated ~500 MQLs/month, positioning a deeply technical AI product to skeptical buyers while leading a team of four.</p>
+          <p>The standout initiative: I spotted evening traffic dropping off at the demo-request wall and built a <strong>no-code self-service onboarding flow</strong> (website CTAs, forms, and Zapier automation) with zero engineering lift. It converted <strong>50%+ of leads to paying customers, doubled the customer base, and drove 3x more customers than the demo funnel</strong> — validating PLG, winning CEO and engineering buy-in, and earning a spot on the Q3 2024 roadmap. The company was <strong>acquired by SourceForge in 2024</strong>.</p>
+          <div class="loom">
+            <div class="frame">
+              <iframe src="https://www.loom.com/embed/410655a557f240a9b0bc9ffae1801bc5" allowfullscreen title="Lineup.ai self-service onboarding — a PLG case study"></iframe>
+            </div>
+            <div class="cap">Walkthrough: the self-service onboarding PLG initiative. &middot; <a href="https://www.loom.com/share/5538e956c4b54b95bc509e3ed15ee6bf" target="_blank" rel="noopener" style="color:var(--blue);font-weight:600;">Also watch: website revamp, PLG &amp; SEO &rarr;</a></div>
+          </div>
+          <div class="results" style="margin-top:18px;">
+            <span class="chip">50%+ lead &rarr; paid</span>
+            <span class="chip">2x customer base</span>
+            <span class="chip">3x self-serve vs. demo</span>
+            <span class="chip">Acquired 2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="meta">
+          <div class="role">Marketing &amp; Revenue Lead</div>
+          <div class="co">GolfNow / NBC Sports Digital</div>
+          <div class="yr">2016 &ndash; 2019 &middot; Stamford, CT</div>
+          <div class="tag">SaaS Launch &middot; Team of 22</div>
+        </div>
+        <div class="body">
+          <h3>Launched GolfNow Plus and beat the Year-1 revenue goal by 20%</h3>
+          <p>Led <strong>22 marketing and revenue specialists</strong> to launch GolfNow Plus, NBC Sports' new SaaS platform — hitting the first-year goal of $1M ARR and <strong>beating it by 20%</strong>, which earned NBC's Sales Leadership Award.</p>
+          <p>Also owned the cross-team GolfNow VIP launch, and ran product marketing across the digital product suite on a $2M annual budget.</p>
+          <div class="results">
+            <span class="chip">$1M ARR goal, +20%</span>
+            <span class="chip">Led team of 22</span>
+            <span class="chip">Sales Leadership Award</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Capabilities</div>
+      <h2>What I bring to the table.</h2>
+      <p>A full-function marketing leader fluent in both the strategy and the build.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-col">
+        <h3><span class="ic">&#9733;</span> Strategy &amp; Positioning</h3>
+        <ul>
+          <li>Category &amp; product positioning</li>
+          <li>AI/ML product marketing</li>
+          <li>Go-to-market strategy</li>
+          <li>Revenue &amp; sales alignment</li>
+          <li>Post-PMF scaling playbooks</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3><span class="ic">&#9889;</span> Demand &amp; Growth</h3>
+        <ul>
+          <li>Demand generation &amp; pipeline</li>
+          <li>Product-led growth (PLG)</li>
+          <li>Traction-channel testing</li>
+          <li>Content, SEO/GEO/AEO &amp; brand</li>
+          <li>B2B SaaS metrics (ARR, CAC, LTV)</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3><span class="ic">&#9881;</span> Systems &amp; AI</h3>
+        <ul>
+          <li>Marketing automation &amp; AI ops</li>
+          <li>N8N &amp; Claude workflow builds</li>
+          <li>Automated content systems</li>
+          <li>Team building &amp; operating cadence</li>
+          <li>Analytics &amp; reporting infrastructure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRACTIONAL / ENGAGE -->
+<section id="engage" class="tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Fractional &amp; Advisory</div>
+      <h2>Ways to work together.</h2>
+      <p>Beyond full-time leadership roles, I take on a limited number of fractional and advisory engagements. Flexible weekly commitments, scaled to what you need.</p>
+    </div>
+    <div class="tiers-wrap">
+      <table class="tiers">
+        <thead>
+          <tr><th>Engagement</th><th>Commitment</th><th>Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="tier">Tier 1</td><td>5 hours / week</td><td class="rate">$200/hr</td></tr>
+          <tr><td class="tier">Tier 2</td><td>10 hours / week</td><td class="rate">$187/hr</td></tr>
+          <tr><td class="tier">Tier 3</td><td>15 hours / week</td><td class="rate">$180/hr</td></tr>
+          <tr><td class="tier">Tier 4</td><td>20 hours / week</td><td class="rate">$175/hr</td></tr>
+          <tr><td class="tier">Tier 5</td><td>20+ hours / week</td><td class="rate">Custom</td></tr>
+          <tr class="adhoc"><td class="tier">Ad-hoc</td><td>As-needed / project</td><td class="rate">$250/hr</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tiers-note">Not sure which fits? <a href="mailto:courtney@courtneycavey.com" style="color:var(--blue);font-weight:600;">Tell me what you're trying to move</a> and I'll recommend a structure.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="eyebrow" style="color:var(--blue-bright)">Get in touch</div>
+      <div class="sec-head" style="margin-bottom:24px;">
+        <h2>Let's scale something.</h2>
+        <p>If you've found product-market fit and need a marketing leader to build the strategy and systems that turn it into predictable growth, I'd love to talk.</p>
+      </div>
+      <div class="hero-cta">
+        <a href="mailto:courtney@courtneycavey.com" class="btn btn-primary">Email me &rarr;</a>
+        <a href="https://courtneycavey.com" class="btn btn-ghost" target="_blank" rel="noopener">View site</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <a href="mailto:courtney@courtneycavey.com"><span class="k">Email</span> courtney@courtneycavey.com</a>
+      <a href="tel:+13862142126"><span class="k">Phone</span> 386-214-2126</a>
+      <a href="https://courtneycavey.com" target="_blank" rel="noopener"><span class="k">Website</span> courtneycavey.com</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="k">LinkedIn</span> Connect with me &rarr;</a>
+      <a href="#top"><span class="k">Location</span> DeLand, FL &middot; Open to remote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; <span id="yr"></span> Courtney Cavey &middot; Growth Marketing Leader</div>
+    <div>Product-market fit, turned into a growth engine.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.querySelectorAll('#navlinks a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('navlinks').classList.remove('open'); });
+  });
+
+  // Active-tab highlighting as you scroll
+  var navMap = {};
+  document.querySelectorAll('#navlinks a[href^="#"]').forEach(function(a){
+    var id = a.getAttribute('href').slice(1);
+    if (id) navMap[id] = a;
+  });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting && navMap[e.target.id]) {
+        Object.values(navMap).forEach(function(l){ l.classList.remove('active'); });
+        navMap[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(navMap).forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) spy.observe(el);
+  });
+</script>
+
+</body>
+</html>
